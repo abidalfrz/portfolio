@@ -131,7 +131,7 @@ export const PROJECTS = [
   {
     title: "Mental Health Sentiment Analysis",
     tags : ["Classification", "NLP", "Transformer", "Sentiment Analysis"],
-    description: "Natural Language Processing project focused on classification of user-generated text into mental health status categories.",
+    description: "Natural Language Processing (NLP) project focused on classification of user-generated text into mental health status categories.",
     techStack: ["Python", "Machine Learning", "NLTK", "PyTorch"],
     link: "",
     github: "https://github.com/abidalfrz/mental-health-sentiment-analysis-classification-nlp"
