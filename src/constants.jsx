@@ -110,7 +110,7 @@ export const PROJECTS = [
     description: "Full-stack web application designed to predict air quality based on various environmental and meteorological features.",
     techStack: ["Python", "Machine Learning", "React", "FastAPI", "Docker"],
     link: "",
-    github: "https://github.com/"
+    github: "https://github.com/abidalfrz/air-quality-prediction-webapp"
   },
   {
     title: "Electricity Cost Prediction System",
@@ -118,7 +118,7 @@ export const PROJECTS = [
     description: "Web application designed to predict electricity costs based on various infrastructure and environmental features.",
     techStack: ["Python", "Machine Learning", "Flask","HTML", "CSS", "JavaScript"],
     link: "",
-    github: "https://github.com/"
+    github: "https://github.com/abidalfrz/electricity-cost-prediction"
   },
   {
     title: "Expense Tracker Application",
@@ -126,7 +126,7 @@ export const PROJECTS = [
     description: "A full-stack web application that allows users to track their expenses.",
     techStack: ["Python", "Flask", "SQLite", "HTML", "CSS", "JavaScript"],
     link: "",
-    github: "https://github.com/"
+    github: "https://github.com/abidalfrz/flask-expense-tracker-webapp"
   },
   {
     title: "Mental Health Sentiment Analysis",
@@ -134,7 +134,7 @@ export const PROJECTS = [
     description: "Natural Language Processing project focused on classification of user-generated text into mental health status categories.",
     techStack: ["Python", "Machine Learning", "NLTK", "PyTorch"],
     link: "",
-    github: "https://github.com/"
+    github: "https://github.com/abidalfrz/mental-health-sentiment-analysis-classification-nlp"
   },
   {
     title: "Cyberbullying Tweet Detection",
@@ -142,7 +142,7 @@ export const PROJECTS = [
     description: "Natural Language Processing (NLP) project focused on identifying and classifying different types of cyberbullying in tweets.",
     techStack: ["Python", "Machine Learning", "NLTK", "PyTorch", "TensorFlow"],
     link: "",
-    github: "https://github.com/"
+    github: "https://github.com/abidalfrz/cyberbullying-classification-multilingual-nlp"
   }
 
 ];
