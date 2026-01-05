@@ -24,7 +24,7 @@ export const ABOUT_ME = {
   description: [
     "I'm a second-year Informatics student at Institut Teknologi Sepuluh Nopember with a strong passion in data Science, machine Learning, and artificial intelligence. Currently engaging in data science and research.",
     "My experience spans various project in web development and machine learning, where I've built full-stack applications and developed machine learning models to solve real-world problems.",
-    "I'm actively involved in data science competitions, which continuously sharpen my problem-solving skills, analytical thinking, research skills. Through these challenges, I apply concepts in optimization, visualization, and algorithm development."
+    "I'm actively involved in data science competitions, which continuously sharpen my problem-solving skills, analytical thinking, and research skills. Through these challenges, I apply concepts in optimization, visualization, and algorithm development."
   ],
   stats: {
     projectCount: "8+",
