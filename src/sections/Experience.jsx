@@ -24,7 +24,7 @@ const Experience = () => {
     <section id="experience" className="py-20 px-6 max-w-5xl mx-auto">
       
       <div className="mb-16">
-        <h2 className="font-semibold text-2xl md:text-3l font-light text-center mb-16 text-primary dark:text-white tracking-tight">
+        <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-16 text-primary dark:text-white tracking-tight">
           Professional Experiences
         </h2>
 
@@ -42,7 +42,7 @@ const Experience = () => {
               </div>
 
               <div>
-                <h3 className="text-l font-bold text-primary dark:text-white mb-1">{exp.role}</h3>
+                <h3 className="text-lg font-bold text-primary dark:text-white mb-1">{exp.role}</h3>
                 <div className="text-secondary dark:text-neutral-400 font-medium mb-4">{exp.company}</div>
                 
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-justify mb-6">
@@ -55,7 +55,7 @@ const Experience = () => {
       </div>
 
       <div className="mb-16">
-        <h2 className="font-semibold text-2xl md:text-3l font-light text-center mb-16 text-primary dark:text-white tracking-tight">
+        <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-16 text-primary dark:text-white tracking-tight">
           Volunteer Experiences
         </h2>
 
@@ -73,7 +73,7 @@ const Experience = () => {
               </div>
 
               <div>
-                <h3 className="text-l font-bold text-primary dark:text-white mb-1">{exp.role}</h3>
+                <h3 className="text-lg font-bold text-primary dark:text-white mb-1">{exp.role}</h3>
                 <div className="text-secondary dark:text-neutral-400 font-medium mb-4">{exp.company}</div>
                 
                 <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-justify mb-4">
