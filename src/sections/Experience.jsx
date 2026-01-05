@@ -36,7 +36,7 @@ const Experience = () => {
                 <div className="font-medium text-secondary dark:text-neutral-400 text-sm md:text-base mb-1">
                   {exp.year}
                 </div>
-                <div className="text-xs text-neutral-400 dark:text-neutral-500 font-medium uppercase tracking-wide">
+                <div className="text-xs text-neutral-400 dark:text-neutral-500 font-medium tracking-wide">
                   {exp.place}
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Experience = () => {
                 <div className="font-medium text-secondary dark:text-neutral-400 text-sm md:text-base mb-1">
                   {exp.year}
                 </div>
-                <div className="text-xs text-neutral-400 dark:text-neutral-500 font-medium uppercase tracking-wide">
+                <div className="text-xs text-neutral-400 dark:text-neutral-500 font-medium tracking-wide">
                   {exp.place}
                 </div>
               </div>
