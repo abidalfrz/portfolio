@@ -83,13 +83,13 @@ export const SKILLS_CATEGORIES = [
 ];
 
 export const EXPERIENCE = [
-  {
-    role: "Steve (I need) Jobs",
-    company: "",
-    year: "2000 BM",
-    place: "",
-    description: ""
-  }
+  // {
+  //   role: "",
+  //   company: "",
+  //   year: "",
+  //   place: "",
+  //   description: ""
+  // }
 ];
 
 export const VOLUNTEER = [
