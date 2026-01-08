@@ -143,6 +143,22 @@ export const PROJECTS = [
     techStack: ["Python", "Machine Learning", "NLTK", "PyTorch", "TensorFlow"],
     link: "",
     github: "https://github.com/abidalfrz/cyberbullying-classification-multilingual-nlp"
+  },
+  {
+    title: "Hoax vs Fact News Detection",
+    tags : ["Classification", "NLP"],
+    description: "Natural Language Processing (NLP) project focused on identifying and classifying news articles as hoax or fact.",
+    techStack: ["Python", "Machine Learning", "NLTK"],
+    link: "",
+    github: "https://github.com/abidalfrz/hoax-news-detection-webapp"
+  },
+  {
+    title: "Indonesian SMS Spam Detection",
+    tags : ["Classification", "NLP"],
+    description: "Natural Language Processing (NLP) project focused on identifying and classifying Indonesian SMS messages as spam or not spam.",
+    techStack: ["Python", "Machine Learning", "NLTK", "TensorFlow", "Streamlit"],
+    link: "",
+    github: "https://github.com/abidalfrz/sms-spam-classification-nlp"
   }
 
 ];
