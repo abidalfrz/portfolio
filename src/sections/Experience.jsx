@@ -22,77 +22,79 @@ const Experience = () => {
   
   return (
     <section id="experience" className="py-20 px-6 max-w-5xl mx-auto">
-      
-      <div className="mb-16">
-        <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-16 text-primary dark:text-white tracking-tight">
-          Professional Experiences
-        </h2>
+      {EXPERIENCE.length > 0 &&
+        <div className="mb-16">
+          <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-16 text-primary dark:text-white tracking-tight">
+            Professional Experiences
+          </h2>
 
-        <div className="space-y-12">
-          {EXPERIENCE.map((exp, idx) => (
-            <div key={idx} className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
-              
-              <div className="flex flex-col md:items-end">
-                <div className="font-medium text-secondary dark:text-neutral-400 text-sm md:text-base mb-1">
-                  {exp.year}
-                </div>
-                <div className="text-xs text-neutral-400 dark:text-neutral-500 font-medium tracking-wide">
-                  {exp.place}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold text-primary dark:text-white mb-1">{exp.role}</h3>
-                <div className="text-secondary dark:text-neutral-400 font-medium mb-4">{exp.company}</div>
+          <div className="space-y-12">
+            {EXPERIENCE.map((exp, idx) => (
+              <div key={idx} className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
                 
-                <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-justify mb-6">
-                  {exp.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="mb-16">
-        <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-16 text-primary dark:text-white tracking-tight">
-          Volunteer Experiences
-        </h2>
-
-        <div className="space-y-12">
-          {VOLUNTEER.map((exp, idx) => ( 
-            <div key={idx} className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
-              
-              <div className="flex flex-col md:items-end">
-                <div className="font-medium text-secondary dark:text-neutral-400 text-sm md:text-base mb-1">
-                  {exp.year}
-                </div>
-                <div className="text-xs text-neutral-400 dark:text-neutral-500 font-medium tracking-wide">
-                  {exp.place}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold text-primary dark:text-white mb-1">{exp.role}</h3>
-                <div className="text-secondary dark:text-neutral-400 font-medium mb-4">{exp.company}</div>
-                
-                <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-justify mb-4">
-                  {exp.description}
-                </p>
-
-                {exp.impact && (
-                  <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg mb-6">
-                    <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 text-sm tracking-wide">Impact</h4>
-                    <p className="text-blue-800 dark:text-blue-300 leading-relaxed text-justify text-sm">
-                      {exp.impact}
-                    </p>
+                <div className="flex flex-col md:items-end">
+                  <div className="font-medium text-secondary dark:text-neutral-400 text-sm md:text-base mb-1">
+                    {exp.year}
                   </div>
-                )}
+                  <div className="text-xs text-neutral-400 dark:text-neutral-500 font-medium tracking-wide">
+                    {exp.place}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-primary dark:text-white mb-1">{exp.role}</h3>
+                  <div className="text-secondary dark:text-neutral-400 font-medium mb-4">{exp.company}</div>
+                  
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-justify mb-6">
+                    {exp.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      }
+
+      {VOLUNTEER.length > 0 &&
+        <div className="mb-16">
+          <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-16 text-primary dark:text-white tracking-tight">
+            Volunteer Experiences
+          </h2>
+          <div className="space-y-12">
+            {VOLUNTEER.map((exp, idx) => ( 
+              <div key={idx} className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
+                
+                <div className="flex flex-col md:items-end">
+                  <div className="font-medium text-secondary dark:text-neutral-400 text-sm md:text-base mb-1">
+                    {exp.year}
+                  </div>
+                  <div className="text-xs text-neutral-400 dark:text-neutral-500 font-medium tracking-wide">
+                    {exp.place}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold text-primary dark:text-white mb-1">{exp.role}</h3>
+                  <div className="text-secondary dark:text-neutral-400 font-medium mb-4">{exp.company}</div>
+                  
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed text-justify mb-4">
+                    {exp.description}
+                  </p>
+
+                  {exp.impact && (
+                    <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-950/30 border-l-4 border-blue-500 rounded-r-lg mb-6">
+                      <h4 className="font-semibold text-blue-900 dark:text-blue-200 mb-2 text-sm tracking-wide">Impact</h4>
+                      <p className="text-blue-800 dark:text-blue-300 leading-relaxed text-justify text-sm">
+                        {exp.impact}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      }
 
       <div>
         <h2 className="font-semibold text-2xl md:text-3l font-light text-center mb-12 text-primary dark:text-white tracking-tight">
