@@ -113,7 +113,7 @@ export const PROJECTS = [
     github: "https://github.com/abidalfrz/air-quality-prediction-webapp"
   },
   {
-    title: "BISINDO Hand Sign Language Alphabet Recognition",
+    title: "BISINDO Sign Language Recognition",
     tags : ["Classification", "Computer Vision"],
     description: "Computer Vision project focused on identifying and classifying BISINDO hand sign language gestures from images.",
     techStack: ["Python", "Machine Learning", "OpenCV", "PyTorch"],
