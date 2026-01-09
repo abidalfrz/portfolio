@@ -113,6 +113,14 @@ export const PROJECTS = [
     github: "https://github.com/abidalfrz/air-quality-prediction-webapp"
   },
   {
+    title: "BISINDO Hand Sign Language Alphabet Recognition",
+    tags : ["Classification", "Computer Vision"],
+    description: "Computer Vision project focused on identifying and classifying BISINDO hand sign language gestures from images.",
+    techStack: ["Python", "Machine Learning", "OpenCV", "PyTorch"],
+    link: "",
+    github: "https://github.com/abidalfrz/BISINDO-hand-sign-language-alphabets-classification"
+  },
+  {
     title: "Electricity Cost Prediction System",
     tags : ["Regression", "Urban Environmental"],
     description: "Web application designed to predict electricity costs based on various infrastructure and environmental features.",
@@ -160,7 +168,6 @@ export const PROJECTS = [
     link: "",
     github: "https://github.com/abidalfrz/sms-spam-classification-nlp"
   }
-
 ];
 
 export const ACHIEVEMENTS = [
