@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div 
-      className="w-[300px] md:w-[340px] shrink-0 group relative bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-xl dark:hover:shadow-neutral-900/50 transition-all duration-300 ease-in-out hover:-translate-y-1 h-full flex flex-col snap-center"
+      className="w-[320px] md:w-[340px] shrink-0 group relative bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-xl dark:hover:shadow-neutral-900/50 transition-all duration-300 ease-in-out hover:-translate-y-1 h-full flex flex-col snap-center"
     >
       
       <div className="absolute top-6 right-6 text-neutral-50 dark:text-neutral-800 group-hover:text-neutral-100 dark:group-hover:text-neutral-700 transition-colors duration-300">
