@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter, Instagram, BarChart2 } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, Instagram, BarChart2, FileText } from 'lucide-react';
 import React from 'react';
 import {
   SiPython, SiJavascript, SiCplusplus, SiReact, SiFastapi,
@@ -241,6 +241,12 @@ export const SOCIAL_LINKS = [
     icon: <Instagram size={20} />, 
     href: "https://instagram.com/abidalfrzi", 
     name: "@abidalfrzi" },
+  { 
+    platform: "CV",
+    icon: <FileText size={20} />, 
+    href: "https://drive.google.com/file/d/1rWgQ-QwoHvcYLH-GPvmKzQB9GNtUzNbq/view?usp=sharing", 
+    name: "View CV" 
+  },
 ];
 
 
