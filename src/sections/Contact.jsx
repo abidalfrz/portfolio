@@ -35,7 +35,7 @@ const Contact = () => {
 
         <div className="pt-8 flex flex-wrap gap-10 text-neutral-400 justify-center border-t border-neutral-800/50 dark:border-neutral-200 mt-8">
             {SOCIAL_LINKS.map((social, idx) => (
-              social.href.includes('linkedin') ? null : (
+              social.href.includes('linkedin') || social.name.includes('CV') ? null : (
 
                 <div 
                   key={idx} 
