@@ -131,7 +131,7 @@ export const PROJECTS = [
   {
     title: "Viz2Speech: Image-to-Speech Generation System",
     tags : ["VLM", "TTS", "Multimodal", "Generative AI"],
-    description: "An Image-to-Speech engine that generates Indonesian natural speech from images using a combination of Visual Language Models (VLM) and Text-to-Speech (TTS) technologies.",
+    description: "An Image-to-Speech engine that generates Indonesian natural speech from images using a combination of VLMs and TTS models.",
     techStack: ["Python", "PyTorch", "FastAPI", "Gradio", "Ngrok"],
     link: "",
     github: "https://github.com/abidalfrz/Viz2Speech"
@@ -276,7 +276,7 @@ export const SOCIAL_LINKS = [
   { 
     platform: "CV",
     icon: <FileUser size={20} />, 
-    href: "https://drive.google.com/file/d/1rWgQ-QwoHvcYLH-GPvmKzQB9GNtUzNbq/view?usp=sharing", 
+    href: "https://drive.google.com/file/d/1jmaJVwRLdapxU0ZKcW2nGDHZoCdoB-Ne/view?usp=sharing", 
     name: "View CV" 
   },
 ];
