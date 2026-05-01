@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter, Instagram, BarChart2, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, Instagram, BarChart2, FileText, FileUser } from 'lucide-react';
 import React from 'react';
 import {
   SiPython, SiJavascript, SiCplusplus, SiReact, SiFastapi,
@@ -22,7 +22,7 @@ export const NAVIGATION = [
 
 export const ABOUT_ME = {
   description: [
-    "I'm a second-year Informatics student at Institut Teknologi Sepuluh Nopember with a strong passion in data Science, machine Learning, and artificial intelligence. Currently engaging in data science and research.",
+    "I'm a second-year Informatics student at Institut Teknologi Sepuluh Nopember with a strong passion in data Science, machine Learning, and artificial intelligence. Currently engaging in data science and AI research.",
     "My experience spans various project in web development and machine learning, where I've built full-stack applications and developed machine learning models to solve real-world problems.",
     "I'm actively involved in data science competitions, which continuously sharpen my problem-solving skills, analytical thinking, and research skills. Through these challenges, I apply concepts in optimization, visualization, and algorithm development."
   ],
@@ -94,9 +94,33 @@ export const EXPERIENCE = [
 
 export const VOLUNTEER = [
   {
+    role: "Vice Head of Data Management Division",
+    company: "INI LHO ITS Forda IKAMADIRI",
+    year: "Nov 2024 - Jan 2025",
+    place: "Surabaya and Kediri, Indonesia",
+    description: "Supervised a team of 5+ staff members to handle operational and data management tasks for Visit and Welcome Sepuluh Nopember events. Designed and implemented digital and physical forms for registration, attendance tracking, and feedback collection using Google Workspace tools.",
+    impact: "Successfully managed and processed data for 300+ participants and 85+ committee members, ensuring smooth registration processes and maintaining consistent communication across all event stages."
+  },
+  {
+    role: "Staff of Data Management Division – Liaison Officer Subdivision",
+    company: "Schematics",
+    year: "May 2025 – Dec 2025",
+    place: "Surabaya, Indonesia",
+    description: "Organized participant data using advanced Google Spreadsheet functions (TEXTJOIN, XLOOKUP, ARRAYFORMULA, etc.) and developed a Python-based messaging automation system utilizing libraries such as pandas, pywhatkit, and pyautogui.",
+    impact: "Systematically and efficiently managed information for 1000+ participants, significantly reducing manual workload and ensuring the timely dissemination of information."
+  },
+  {
+    role: "Staff of Data Management Division – Data Center Subdivision",
+    company: "GERIGI X UKM EXPO ITS",
+    year: "Jul 2025 - Aug 2025",
+    place: "Surabaya, Indonesia",
+    description: "Managed new student data using Google Forms and spreadsheets with advanced formulas. Executed student clustering processes using Python optimization and developed automation workflows via Google Apps Script.",
+    impact: "Efficiently administered data for 6000+ new students, substantially reducing repetitive administrative tasks and increasing overall operational efficiency during the event."
+  },
+  {
     role: "Operational Team",
     company: "1000 Duta AI",
-    year: "Okt 2025",
+    year: "Oct 2025",
     place: "Surabaya, Indonesia",
     description: "Coordinated 600+ Duta AI participants to maintain an organized flow throughout the event, assisted Event Committee in preparing and managing event logistics. Also supported lecturers during material presentation.",
     impact: "Successfully facilitated the smooth execution of the event and ensuring participant satisfaction and effective knowledge dissemination."
@@ -105,10 +129,18 @@ export const VOLUNTEER = [
 
 export const PROJECTS = [
   {
+    title: "Viz2Speech: Image-to-Speech Generation System",
+    tags : ["VLM", "TTS", "Multimodal", "Generative AI"],
+    description: "An Image-to-Speech engine that generates Indonesian natural speech from images using a combination of Visual Language Models (VLM) and Text-to-Speech (TTS) technologies.",
+    techStack: ["Python", "PyTorch", "FastAPI", "Gradio", "Ngrok"],
+    link: "",
+    github: "https://github.com/abidalfrz/Viz2Speech"
+  },
+  {
     title: "Air Quality Prediction System",
     tags : ["Classification", "Environmental Data"],
     description: "Full-stack web application designed to predict air quality based on various environmental and meteorological features.",
-    techStack: ["Python", "Machine Learning", "React", "FastAPI", "Docker"],
+    techStack: ["Python", "React", "FastAPI", "Docker"],
     link: "",
     github: "https://github.com/abidalfrz/air-quality-prediction-webapp"
   },
@@ -116,7 +148,7 @@ export const PROJECTS = [
     title: "BISINDO Sign Language Recognition",
     tags : ["Classification", "Computer Vision"],
     description: "Computer Vision project focused on identifying and classifying BISINDO hand sign language gestures from images.",
-    techStack: ["Python", "Machine Learning", "OpenCV", "PyTorch"],
+    techStack: ["Python", "OpenCV", "PyTorch"],
     link: "",
     github: "https://github.com/abidalfrz/BISINDO-hand-sign-language-alphabets-classification"
   },
@@ -124,7 +156,7 @@ export const PROJECTS = [
     title: "Electricity Cost Prediction System",
     tags : ["Regression", "Urban Environmental"],
     description: "Web application designed to predict electricity costs based on various infrastructure and environmental features.",
-    techStack: ["Python", "Machine Learning", "Flask","HTML", "CSS", "JavaScript"],
+    techStack: ["Python","Flask","HTML", "CSS", "JavaScript"],
     link: "",
     github: "https://github.com/abidalfrz/electricity-cost-prediction"
   },
@@ -140,7 +172,7 @@ export const PROJECTS = [
     title: "Mental Health Sentiment Analysis",
     tags : ["Classification", "NLP", "Transformer", "Sentiment Analysis"],
     description: "Natural Language Processing (NLP) project focused on classification of user-generated text into mental health status categories.",
-    techStack: ["Python", "Machine Learning", "NLTK", "PyTorch"],
+    techStack: ["Python", "NLTK", "PyTorch"],
     link: "",
     github: "https://github.com/abidalfrz/mental-health-sentiment-analysis-classification-nlp"
   },
@@ -148,7 +180,7 @@ export const PROJECTS = [
     title: "Cyberbullying Tweet Detection",
     tags : ["Classification", "NLP", "Transformer", "Sentiment Analysis"],
     description: "Natural Language Processing (NLP) project focused on identifying and classifying different types of cyberbullying in tweets.",
-    techStack: ["Python", "Machine Learning", "NLTK", "PyTorch", "TensorFlow"],
+    techStack: ["Python", "NLTK", "PyTorch", "TensorFlow"],
     link: "",
     github: "https://github.com/abidalfrz/cyberbullying-classification-multilingual-nlp"
   },
@@ -156,7 +188,7 @@ export const PROJECTS = [
     title: "Hoax vs Fact News Detection",
     tags : ["Classification", "NLP"],
     description: "Natural Language Processing (NLP) project focused on identifying and classifying news articles as hoax or fact.",
-    techStack: ["Python", "Machine Learning", "NLTK"],
+    techStack: ["Python", "NLTK"],
     link: "",
     github: "https://github.com/abidalfrz/hoax-news-detection-webapp"
   },
@@ -164,7 +196,7 @@ export const PROJECTS = [
     title: "Indonesian SMS Spam Detection",
     tags : ["Classification", "NLP"],
     description: "Natural Language Processing (NLP) project focused on identifying and classifying Indonesian SMS messages as spam or not spam.",
-    techStack: ["Python", "Machine Learning", "NLTK", "TensorFlow", "Streamlit"],
+    techStack: ["Python", "NLTK", "TensorFlow", "Streamlit"],
     link: "",
     github: "https://github.com/abidalfrz/sms-spam-classification-nlp"
   }
@@ -243,7 +275,7 @@ export const SOCIAL_LINKS = [
     name: "@abidalfrzi" },
   { 
     platform: "CV",
-    icon: <FileText size={20} />, 
+    icon: <FileUser size={20} />, 
     href: "https://drive.google.com/file/d/1rWgQ-QwoHvcYLH-GPvmKzQB9GNtUzNbq/view?usp=sharing", 
     name: "View CV" 
   },
