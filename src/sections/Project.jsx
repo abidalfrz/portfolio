@@ -1,4 +1,5 @@
 import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import React, { useRef, useEffect, useState } from "react";
 import { PROJECTS } from "../constants";
 
 const ProjectCard = ({ project }) => {
@@ -7,13 +8,8 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div 
-      // Removed snap-center as it's now an automatic slider
       className="w-[320px] md:w-[340px] shrink-0 group relative bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-xl dark:hover:shadow-neutral-900/50 transition-all duration-300 ease-in-out hover:-translate-y-1 h-full flex flex-col"
     >
-      
-      <div className="absolute top-6 right-6 text-neutral-50 dark:text-neutral-800 group-hover:text-neutral-100 dark:group-hover:text-neutral-700 transition-colors duration-300">
-      </div>
-
       <div className="relative z-10 flex justify-between items-start mb-4 h-[3.5rem]">
         <h3 className="text-xl font-bold text-primary dark:text-white leading-tight group-hover:text-black dark:group-hover:text-white transition-colors pr-8 line-clamp-2">
           {project.title}
@@ -63,7 +59,7 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      <div className="mt-4 w-full">
+      <div className="mt-4 w-full relative z-20">
         {project.github && (
           <a 
             href={project.github} 
@@ -77,36 +73,70 @@ const ProjectCard = ({ project }) => {
       </div>
 
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-neutral-200 to-transparent group-hover:from-primary group-hover:to-neutral-400 transition-all duration-300 rounded-b-2xl dark:from-neutral-800 dark:group-hover:from-white dark:group-hover:to-neutral-600"></div>
-
     </div>
   );
 };
 
 const Project = () => {
+  const scrollRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
   const duplicatedProjects = [...PROJECTS, ...PROJECTS];
+
+  useEffect(() => {
+    const slider = scrollRef.current;
+    if (!slider) return;
+
+    let animationFrameId;
+
+    const autoScroll = () => {
+      if (!isPaused && !isDragging) {
+        slider.scrollLeft += 1; // Speed of the slider (increase for faster)
+
+        // Infinite loop 
+        if (slider.scrollLeft >= slider.scrollWidth / 2) {
+          slider.scrollLeft = 0;
+        } else if (slider.scrollLeft <= 0) {
+          slider.scrollLeft = slider.scrollWidth / 2;
+        }
+      }
+      animationFrameId = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrameId = requestAnimationFrame(autoScroll);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isPaused, isDragging]);
+
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+    setIsPaused(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5; // Drag sensitivity 
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   return (
     <section id="projects" className="py-20 px-6 max-w-5xl mx-auto overflow-hidden">
       
-      <style>
-        {`
-          @keyframes infinite-slider {
-            0% { transform: translateX(0); }
-            /* Translate by half the total width minus half the gap (1.5rem / 2 = 0.75rem) */
-            100% { transform: translateX(calc(-50% - 0.75rem)); }
-          }
-          .animate-infinite-slider {
-            display: flex;
-            width: max-content;
-            animation: infinite-slider 40s linear infinite;
-          }
-          /* Pauses the animation when the user hovers over the slider */
-          .animate-infinite-slider:hover {
-            animation-play-state: paused;
-          }
-        `}
-      </style>
-
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="mb-12">
@@ -120,10 +150,30 @@ const Project = () => {
 
         <div className="relative w-full overflow-hidden pb-12 pt-4">
           
-          <div className="absolute left-0 top-0 w-12 md:w-24 h-full bg-gradient-to-r from-surface/30 dark:from-neutral-900/30 to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 w-12 md:w-24 h-full bg-gradient-to-l from-surface/30 dark:from-neutral-900/30 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 w-8 md:w-24 h-full bg-gradient-to-r from-surface/30 dark:from-neutral-900/30 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 w-8 md:w-24 h-full bg-gradient-to-l from-surface/30 dark:from-neutral-900/30 to-transparent z-10 pointer-events-none"></div>
 
-          <div className="animate-infinite-slider gap-6 px-4">
+          <div 
+            ref={scrollRef}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={() => setIsPaused(true)}
+            onTouchStart={() => setIsPaused(true)}
+            onTouchEnd={() => setIsPaused(false)}
+            className={`flex gap-6 px-4 overflow-x-auto no-scrollbar ${isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
+            style={{ 
+              scrollbarWidth: 'none', // Firefox
+              msOverflowStyle: 'none'  // IE 10+
+            }}
+          >
+            <style>{`
+              .no-scrollbar::-webkit-scrollbar {
+                display: none;
+              }
+            `}</style>
+
             {duplicatedProjects.map((project, idx) => (
               <ProjectCard key={idx} project={project} />
             ))}
@@ -143,7 +193,6 @@ const Project = () => {
         </div>
 
       </div>
-
     </section>
   );
 };
