@@ -86,7 +86,7 @@ const Project = () => {
   const duplicatedProjects = [...PROJECTS, ...PROJECTS];
 
   return (
-    <section id="projects" className="py-20 w-full bg-surface/30 dark:bg-neutral-900/30 overflow-hidden">
+    <section id="projects" className="py-20 px-6 max-w-5xl mx-auto overflow-hidden">
       
       <style>
         {`
