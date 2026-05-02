@@ -83,7 +83,7 @@ const ProjectCard = ({ project }) => {
 
 const Project = () => {
   return (
-    <section id="projects" className="py-20 w-full bg-surface/30 dark:bg-neutral-900/30">
+    <section id="projects" className="py-20 px-6 max-w-5xl mx-auto">
       
       <div className="max-w-6xl mx-auto px-6">
         
