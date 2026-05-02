@@ -18,6 +18,7 @@ export const NAVIGATION = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
+  { label: "Writes", href: "#writes" }
 ];
 
 export const ABOUT_ME = {
@@ -281,5 +282,16 @@ export const SOCIAL_LINKS = [
   },
 ];
 
-
+export const WRITES = [
+  {
+    title: "Ekstraksi Signature Keywords dari Review Game Steam via TF-IDF",
+    description: "Implementation of TF-IDF for extracting signature keywords from Steam game reviews, providing insights into user sentiments and preferences.",
+    link: "https://medium.com/@abidalfaridzi18/ekstraksi-signature-keywords-dari-steam-game-reviews-via-tf-idf-bbaf28f00a3f"
+  },
+  {
+    title: "Viz2Speech: Indonesian Spoken Image Captions to Enhance Accessibility for the Visually Impaired Using RL-Optimized VLM and Voice Synthesis",
+    description: "An Image-to-Speech engine that generates Indonesian natural speech from images using Qwen3-VL optimized using GRPO and ChatterboxTTS model, aiming to enhance accessibility for visually impaired individuals.",
+    link: "https://medium.com/@abidalfaridzi18/viz2speech-indonesian-spoken-image-captions-to-enhance-accessibility-for-the-visually-impaired-e3ee49af2cd5"
+  }
+]
 
