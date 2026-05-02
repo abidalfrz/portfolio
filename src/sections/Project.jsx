@@ -7,7 +7,8 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div 
-      className="w-[320px] md:w-[340px] shrink-0 group relative bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-xl dark:hover:shadow-neutral-900/50 transition-all duration-300 ease-in-out hover:-translate-y-1 h-full flex flex-col snap-center"
+      // Removed snap-center as it's now an automatic slider
+      className="w-[320px] md:w-[340px] shrink-0 group relative bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-6 rounded-2xl hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-xl dark:hover:shadow-neutral-900/50 transition-all duration-300 ease-in-out hover:-translate-y-1 h-full flex flex-col"
     >
       
       <div className="absolute top-6 right-6 text-neutral-50 dark:text-neutral-800 group-hover:text-neutral-100 dark:group-hover:text-neutral-700 transition-colors duration-300">
@@ -82,13 +83,34 @@ const ProjectCard = ({ project }) => {
 };
 
 const Project = () => {
+  const duplicatedProjects = [...PROJECTS, ...PROJECTS];
+
   return (
-    <section id="projects" className="py-20 px-6 max-w-5xl mx-auto">
+    <section id="projects" className="py-20 w-full bg-surface/30 dark:bg-neutral-900/30 overflow-hidden">
       
+      <style>
+        {`
+          @keyframes infinite-slider {
+            0% { transform: translateX(0); }
+            /* Translate by half the total width minus half the gap (1.5rem / 2 = 0.75rem) */
+            100% { transform: translateX(calc(-50% - 0.75rem)); }
+          }
+          .animate-infinite-slider {
+            display: flex;
+            width: max-content;
+            animation: infinite-slider 40s linear infinite;
+          }
+          /* Pauses the animation when the user hovers over the slider */
+          .animate-infinite-slider:hover {
+            animation-play-state: paused;
+          }
+        `}
+      </style>
+
       <div className="max-w-6xl mx-auto px-6">
         
         <div className="mb-12">
-          <h2 className="font-semibold text-2xl md:text-3l font-light text-primary dark:text-white text-center tracking-tight mb-6">
+          <h2 className="font-semibold text-2xl md:text-3xl font-light text-primary dark:text-white text-center tracking-tight mb-6">
             Featured Projects
           </h2>
           <h3 className="text-center text-secondary dark:text-neutral-400 max-w-2xl mx-auto">
@@ -96,11 +118,16 @@ const Project = () => {
           </h3>
         </div>
 
-        <div className="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory no-scrollbar">
-          {PROJECTS.map((project, idx) => (
-            <ProjectCard key={idx} project={project} />
-          ))}
-          <div className="w-2 shrink-0"></div>
+        <div className="relative w-full overflow-hidden pb-12 pt-4">
+          
+          <div className="absolute left-0 top-0 w-12 md:w-24 h-full bg-gradient-to-r from-surface/30 dark:from-neutral-900/30 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 w-12 md:w-24 h-full bg-gradient-to-l from-surface/30 dark:from-neutral-900/30 to-transparent z-10 pointer-events-none"></div>
+
+          <div className="animate-infinite-slider gap-6 px-4">
+            {duplicatedProjects.map((project, idx) => (
+              <ProjectCard key={idx} project={project} />
+            ))}
+          </div>
         </div>
         
         <div className="mt-4 flex justify-center">
