@@ -130,7 +130,7 @@ export const VOLUNTEER = [
 
 export const PROJECTS = [
   {
-    title: "Viz2Speech: Image-to-Speech Generation System",
+    title: "Viz2Speech: Indonesian Image-to-Speech System",
     tags : ["VLM", "TTS", "Multimodal", "Generative AI"],
     description: "An Image-to-Speech engine that generates Indonesian natural speech from images using a combination of VLMs and TTS models.",
     techStack: ["Python", "PyTorch", "FastAPI", "Gradio", "Ngrok"],
