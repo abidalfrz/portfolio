@@ -17,8 +17,8 @@ export const NAVIGATION = [
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-  { label: "Writes", href: "#writes" }
+  { label: "Writes", href: "#writes" },
+  { label: "Contact", href: "#contact" }
 ];
 
 export const ABOUT_ME = {
