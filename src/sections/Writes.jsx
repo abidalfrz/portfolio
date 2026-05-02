@@ -44,7 +44,7 @@ const Writes = () => {
       <div className="max-w-4xl mx-auto px-6">
         
         <div className="mb-12">
-          <h2 className="font-semibold text-2xl md:text-3xl text-primary dark:text-white text-center tracking-tight mb-4">
+          <h2 className="font-semibold text-2xl md:text-3l text-primary dark:text-white text-center tracking-tight mb-4">
             Featured Writes
           </h2>
           <h3 className="text-center text-secondary dark:text-neutral-400 max-w-2xl mx-auto">

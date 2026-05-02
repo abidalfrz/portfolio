@@ -96,80 +96,47 @@ const Experience = () => {
         </div>
       }
 
-      <div>
-        <h2 className="font-semibold text-2xl md:text-3l font-light text-center mb-12 text-primary dark:text-white tracking-tight">
-          Awards
-        </h2>
+      {ACHIEVEMENTS.length > 0 && (
+        <div>
+          <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-12 text-primary dark:text-white tracking-tight">
+            Awards
+          </h2>
 
-        <div className="flex items-center gap-4 md:gap-8">
-          
-          <button 
-            onClick={prevSlide}
-            className="hidden md:flex shrink-0 p-3 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-primary dark:hover:bg-white hover:text-white dark:hover:text-primary hover:border-primary transition-all duration-300 z-10"
-            aria-label="Previous Award"
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <div className="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {visibleAwards.map((award, idx) => (
+          <div className="flex flex-col border-t border-neutral-200 dark:border-neutral-800">
+            {ACHIEVEMENTS.map((award, idx) => (
               <div 
                 key={`${award.title}-${idx}`} 
-                className="group relative bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-8 rounded-2xl hover:border-neutral-400 dark:hover:border-neutral-600 hover:shadow-xl dark:hover:shadow-neutral-900/50 transition-all duration-300 ease-in-out hover:-translate-y-1 h-full flex flex-col"
+                className="group relative flex flex-col md:flex-row md:items-center justify-between border-b border-neutral-200 dark:border-neutral-800 py-6 md:py-8 px-4 transition-all duration-300 hover:bg-neutral-50 dark:hover:bg-neutral-900/50"
               >
-                <div className="absolute top-6 right-6 text-neutral-50 dark:text-neutral-800 group-hover:text-neutral-100 dark:group-hover:text-neutral-700 transition-colors duration-300">
-                  <Trophy size={32} strokeWidth={1} />
-                </div>
-
-                <div className="flex items-center gap-3 text-xs font-medium text-neutral-400 dark:text-neutral-500 uppercase tracking-wider mb-4 relative z-10">
-                  <span>{award.date}</span>
-                  <span>•</span>
-                  <span>{award.scale}</span>
-                </div>
-
-                <div className="relative z-10 mb-auto">
-                  <h3 className="text-xl font-bold text-primary dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors mb-3 min-h-[3.5rem] flex items-end">
+                
+                <div className="flex-1 mb-4 md:mb-0 pr-0 md:pr-6">
+                  <h3 className="text-lg md:text-xl font-bold text-primary dark:text-white group-hover:text-black dark:group-hover:text-gray-300 transition-colors leading-snug">
                     {award.title}
                   </h3>
-                  
-                  <div className="mb-4">
-                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${award.rank.includes('Finalist') ? 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700' : 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 border-yellow-200 dark:border-yellow-700'}`}>
-                      {award.rank}
+                  <div className="flex flex-wrap items-center gap-2 md:gap-3 mt-3 text-xs md:text-sm text-neutral-500 dark:text-neutral-400">
+                    <span className="font-medium text-neutral-700 dark:text-neutral-300">{award.type}</span>
+                    <span className="hidden md:inline">•</span>
+                    <span className="bg-neutral-100 dark:bg-neutral-800 px-2 py-0.5 rounded md:bg-transparent md:p-0 md:border-none uppercase md:normal-case tracking-wider md:tracking-normal text-[10px] md:text-sm">
+                      {award.scale}
                     </span>
                   </div>
                 </div>
 
-                <div className="relative z-10 mt-2 border-t border-neutral-100 dark:border-neutral-800 pt-4">
-                    <div className="text-sm font-semibold text-neutral-400 dark:text-neutral-500">
-                      {award.type}
-                    </div>
+                <div className="shrink-0 flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center gap-3 md:gap-2">
+                  <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${award.rank.includes('Finalist') ? 'bg-neutral-100 dark:bg-neutral-800 text-neutral-600 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700' : 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 border-yellow-200 dark:border-yellow-700'}`}>
+                    <Trophy size={14} /> {award.rank}
+                  </span>
+                  <span className="text-xs font-medium text-neutral-400 dark:text-neutral-500 uppercase tracking-widest">
+                    {award.date}
+                  </span>
                 </div>
 
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-neutral-200 to-transparent group-hover:from-primary group-hover:to-neutral-400 transition-all duration-300 rounded-b-2xl dark:from-neutral-800 dark:group-hover:from-white dark:group-hover:to-neutral-600"></div>
+                <div className="absolute left-0 top-0 h-full w-1 bg-transparent group-hover:bg-primary dark:group-hover:bg-white transition-colors duration-300"></div>
               </div>
             ))}
           </div>
-
-          <button 
-            onClick={nextSlide}
-            className="hidden md:flex shrink-0 p-3 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-primary dark:hover:bg-white hover:text-white dark:hover:text-primary hover:border-primary transition-all duration-300 z-10"
-            aria-label="Next Award"
-          >
-            <ChevronRight size={24} />
-          </button>
-
         </div>
-
-        <div className="md:hidden flex justify-center gap-6 mt-8">
-          <button onClick={prevSlide} className="p-3 rounded-full border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-primary dark:hover:bg-white hover:text-white transition-all">
-            <ChevronLeft size={24} />
-          </button>
-          <button onClick={nextSlide} className="p-3 rounded-full border border-neutral-200 dark:border-neutral-800 text-neutral-600 dark:text-neutral-400 hover:bg-primary dark:hover:bg-white hover:text-white transition-all">
-            <ChevronRight size={24} />
-          </button>
-        </div>
-
-      </div>
+      )}
 
     </section>
   );
