@@ -27,7 +27,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl text-secondary dark:text-neutral-400 max-w-lg leading-relaxed">
-            Passionate about Data Science, Machine Learning, and AI. 
+            Passionate about Data Science, Machine Learning, and Artificial Intelligence. 
             Dedicated to leveraging data-driven insights to solve real world problems and build innovative solutions. 
           </p>
 
