@@ -144,7 +144,7 @@ const Project = () => {
             Featured Projects
           </h2>
           <h3 className="text-center text-secondary dark:text-neutral-400 max-w-2xl mx-auto">
-            A collection of my continuously evolving projects, showcasing my expertise in data science, machine learning, and web development.
+            A collection of my continuously evolving projects.
           </h3>
         </div>
 
