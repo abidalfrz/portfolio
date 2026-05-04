@@ -48,7 +48,7 @@ const Writes = () => {
             Featured Writes
           </h2>
           <h3 className="text-center text-secondary dark:text-neutral-400 max-w-2xl mx-auto">
-            A collection of my technical articles and insights, sharing knowledge on data science, machine learning, and AI.
+            A collection of my technical articles and insights.
           </h3>
         </div>
 
