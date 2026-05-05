@@ -94,7 +94,7 @@ const Project = () => {
 
     const autoScroll = () => {
       if (!isPaused && !isDragging) {
-        slider.scrollLeft += 1; // Speed of the slider (increase for faster)
+        slider.scrollLeft += 1; // Speed of the slider
 
         // Infinite loop 
         if (slider.scrollLeft >= slider.scrollWidth / 2) {
