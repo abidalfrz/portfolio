@@ -19,7 +19,6 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
             </a>
           ))}
           
-          {/* Theme Toggle Button (Desktop) */}
           <button 
             onClick={toggleTheme} 
             className="p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800 text-primary dark:text-white transition-all"
@@ -30,7 +29,6 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
         </div>
 
         <div className="flex items-center gap-4 md:hidden">
-          {/* Theme Toggle Button (Mobile) */}
           <button 
             onClick={toggleTheme} 
             className="p-2 text-primary dark:text-white"
@@ -38,14 +36,12 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
             {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
-          {/* Mobile Menu Button */}
           <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-primary dark:text-white">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="md:hidden absolute w-full bg-white dark:bg-neutral-950 border-b border-neutral-100 dark:border-neutral-800 py-4 px-6 flex flex-col gap-4">
           {NAVIGATION.map((item) => (
