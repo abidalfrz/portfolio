@@ -212,7 +212,7 @@ export const PROJECTS = [
   {
     title: "Indonesian Province Socio-Economic Clustering",
     tags : ["Clustering", "Unsupervised Learning"],
-    description: "Unsupervised learning project focused on clustering Indonesian provinces based on various socio-economic indicators.",
+    description: "Unsupervised learning project focused on clustering Indonesia's provinces based on various socio-economic indicators.",
     techStack: ["Python", "Scikit-learn", "Geopandas", "Matplotlib", "Plotly"],
     link: "",
     github: "https://github.com/abidalfrz/indonesian-socioeconomic-clustering",
