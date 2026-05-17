@@ -125,6 +125,14 @@ export const VOLUNTEER = [
     place: "Surabaya, Indonesia",
     description: "Coordinated 600+ Duta AI participants to maintain an organized flow throughout the event, assisted Event Committee in preparing and managing event logistics. Also supported lecturers during material presentation.",
     impact: "Successfully facilitated the smooth execution of the event and ensuring participant satisfaction and effective knowledge dissemination."
+  },
+  {
+    role: "Staff of Research and Technology",
+    company: "HMTC 2026 - Niat Baik",
+    year: "March 2026 - Now",
+    place: "Surabaya, Indonesia",
+    description: "Build a community and platform for informatics ITS students to develop their passion and skills in the field of scientific and competition.",
+    impact: "Currently managing competition community, organizing lecturer's workshop, and managing scientific bootcamp to develop students' skills and knowledge in the field of scientific and competition."
   }
 ];
 
@@ -200,6 +208,14 @@ export const PROJECTS = [
     techStack: ["Python", "NLTK", "TensorFlow", "Streamlit"],
     link: "",
     github: "https://github.com/abidalfrz/sms-spam-classification-nlp"
+  },
+  {
+    title: "Indonesian Province Socio-Economic Clustering",
+    tags : ["Clustering", "Unsupervised Learning"],
+    description: "Unsupervised learning project focused on clustering Indonesian provinces based on various socio-economic indicators.",
+    techStack: ["Python", "Scikit-learn", "Geopandas", "Matplotlib", "Plotly"],
+    link: "",
+    github: "https://github.com/abidalfrz/indonesian-socioeconomic-clustering",
   }
 ];
 
