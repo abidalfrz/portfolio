@@ -37,7 +37,7 @@ export const EDUCATION = [
   {
     institution: "Institut Teknologi Sepuluh Nopember",
     degree: "Bachelor of Informatics",
-    year: "2024 - 2028",
+    year: "2024 — 2028",
     coursework: "Data Structure, Database System, Operating System, Artificial Intelligence Concept, Software Engineering Concept, Linear Algebra, Discrete Mathematics"
   }
 ];
@@ -97,7 +97,7 @@ export const VOLUNTEER = [
   {
     role: "Vice Head of Data Management Division",
     company: "INI LHO ITS Forda IKAMADIRI",
-    year: "Nov 2024 - Jan 2025",
+    year: "Nov 2024 — Jan 2025",
     place: "Surabaya and Kediri, Indonesia",
     description: "Supervised a team of 5+ staff members to handle operational and data management tasks for Visit and Welcome Sepuluh Nopember events. Designed and implemented digital and physical forms for registration, attendance tracking, and feedback collection using Google Workspace tools.",
     impact: "Successfully managed and processed data for 300+ participants and 85+ committee members, ensuring smooth registration processes and maintaining consistent communication across all event stages."
@@ -105,7 +105,7 @@ export const VOLUNTEER = [
   {
     role: "Staff of Data Management Division – Liaison Officer Subdivision",
     company: "Schematics",
-    year: "May 2025 – Dec 2025",
+    year: "May 2025 — Dec 2025",
     place: "Surabaya, Indonesia",
     description: "Organized participant data using advanced Google Spreadsheet functions (TEXTJOIN, XLOOKUP, ARRAYFORMULA, etc.) and developed a Python-based messaging automation system utilizing libraries such as pandas, pywhatkit, and pyautogui.",
     impact: "Systematically and efficiently managed information for 1000+ participants, significantly reducing manual workload and ensuring the timely dissemination of information."
@@ -113,7 +113,7 @@ export const VOLUNTEER = [
   {
     role: "Staff of Data Management Division – Data Center Subdivision",
     company: "GERIGI X UKM EXPO ITS",
-    year: "Jul 2025 - Aug 2025",
+    year: "Jul 2025 — Aug 2025",
     place: "Surabaya, Indonesia",
     description: "Managed new student data using Google Forms and spreadsheets with advanced formulas. Executed student clustering processes using Python optimization and developed automation workflows via Google Apps Script.",
     impact: "Efficiently administered data for 6000+ new students, substantially reducing repetitive administrative tasks and increasing overall operational efficiency during the event."
@@ -129,7 +129,7 @@ export const VOLUNTEER = [
   {
     role: "Staff of Research and Technology",
     company: "HMTC 2026 - Niat Baik",
-    year: "March 2026 - Now",
+    year: "March 2026 — Now",
     place: "Surabaya, Indonesia",
     description: "Build a community and platform for informatics ITS students to develop their passion and skills in the field of scientific and competition.",
     impact: "Currently managing competition community, organizing lecturer's workshop, and managing scientific bootcamp to develop students' skills and knowledge in the field of scientific and competition."
