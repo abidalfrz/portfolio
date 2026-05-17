@@ -72,7 +72,7 @@ const ProjectCard = ({ project }) => {
         )}
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-neutral-200 to-transparent group-hover:from-primary group-hover:to-neutral-400 transition-all duration-300 rounded-b-2xl dark:from-neutral-800 dark:group-hover:from-white dark:group-hover:to-neutral-600"></div>
+      {/* <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-neutral-200 to-transparent group-hover:from-primary group-hover:to-neutral-400 transition-all duration-300 rounded-b-2xl dark:from-neutral-800 dark:group-hover:from-white dark:group-hover:to-neutral-600"></div> */}
     </div>
   );
 };
