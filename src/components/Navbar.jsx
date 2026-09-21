@@ -32,11 +32,17 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
           <button 
             onClick={toggleTheme} 
             className="p-2 text-primary dark:text-white"
+            aria-label="Toggle Dark Mode"
           >
             {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
-          <button onClick={() => setIsOpen(!isOpen)} className="p-2 text-primary dark:text-white">
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="p-2 text-primary dark:text-white"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
