@@ -7,13 +7,13 @@ const Experience = () => {
     <section id="experience" className="py-20 px-6 max-w-5xl mx-auto">
       {EXPERIENCE.length > 0 &&
         <div className="mb-16">
-          <h2 className="font-semibold text-2xl md:text-3xl font-light text-center mb-16 text-primary dark:text-white tracking-tight">
+          <h2 data-reveal className="font-semibold text-2xl md:text-3xl font-light text-center mb-16 text-primary dark:text-white tracking-tight">
             Professional Experiences
           </h2>
 
           <div className="space-y-12">
             {EXPERIENCE.map((exp, idx) => (
-              <div key={idx} className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
+              <div key={idx} data-reveal className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
                 
                 <div className="flex flex-col md:items-end">
                   <div className="font-medium text-secondary dark:text-neutral-400 text-sm md:text-base mb-1">
@@ -40,12 +40,12 @@ const Experience = () => {
 
       {VOLUNTEER.length > 0 &&
         <div className="mb-16">
-          <h2 className="font-semibold text-2xl md:text-3xl font-light text-center mb-16 text-primary dark:text-white tracking-tight">
+          <h2 data-reveal className="font-semibold text-2xl md:text-3xl font-light text-center mb-16 text-primary dark:text-white tracking-tight">
             Volunteer Experiences
           </h2>
           <div className="space-y-12">
             {VOLUNTEER.map((exp, idx) => ( 
-              <div key={idx} className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
+              <div key={idx} data-reveal className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-12">
                 
                 <div className="flex flex-col md:items-end">
                   <div className="font-medium text-secondary dark:text-neutral-400 text-sm md:text-base mb-1">
@@ -81,11 +81,11 @@ const Experience = () => {
 
       {ACHIEVEMENTS.length > 0 && (
         <div>
-          <h2 className="font-semibold text-2xl md:text-3xl font-light text-center mb-12 text-primary dark:text-white tracking-tight">
+          <h2 data-reveal className="font-semibold text-2xl md:text-3xl font-light text-center mb-12 text-primary dark:text-white tracking-tight">
             Awards
           </h2>
 
-          <div className="flex flex-col border-t border-neutral-200 dark:border-neutral-800">
+          <div data-reveal className="flex flex-col border-t border-neutral-200 dark:border-neutral-800">
             {ACHIEVEMENTS.map((award, idx) => (
               <div 
                 key={`${award.title}-${idx}`} 
