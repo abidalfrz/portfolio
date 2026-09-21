@@ -43,7 +43,7 @@ const Writes = () => {
       
       <div className="max-w-4xl mx-auto px-6">
         
-        <div className="mb-12">
+        <div data-reveal className="mb-12">
           <h2 className="font-semibold text-2xl md:text-3xl text-primary dark:text-white text-center tracking-tight mb-4">
             Featured Writes
           </h2>
@@ -54,7 +54,9 @@ const Writes = () => {
 
         <div className="flex flex-col">
           {WRITES.map((write, idx) => (
-            <WriteRow key={idx} write={write} />
+            <div key={idx} data-reveal>
+              <WriteRow write={write} />
+            </div>
           ))}
         </div>
         
