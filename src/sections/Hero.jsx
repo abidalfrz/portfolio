@@ -13,10 +13,10 @@ const Hero = () => {
               <MapPin size={16} className="text-primary dark:text-white" />
               {PERSONAL_INFO.location}
             </div>
-            <span className="text-neutral-300 dark:text-neutral-600">•</span>
-            <div className="text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-2 py-0.5 rounded-full border border-green-100 dark:border-green-800">
+            {/* <span className="text-neutral-300 dark:text-neutral-600">•</span> */}
+            {/* <div className="text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-2 py-0.5 rounded-full border border-green-100 dark:border-green-800">
               {PERSONAL_INFO.status}
-            </div>
+            </div> */}
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold lg:text-7xl text-primary dark:text-white leading-[0.9]">
