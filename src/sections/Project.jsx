@@ -162,7 +162,7 @@ const Project = () => {
             onMouseEnter={() => setIsPaused(true)}
             onTouchStart={() => setIsPaused(true)}
             onTouchEnd={() => setIsPaused(false)}
-            className={`flex gap-6 px-4 overflow-x-auto no-scrollbar ${isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
+            className={`flex gap-6 px-4 py-6 overflow-x-auto no-scrollbar ${isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
             style={{ 
               scrollbarWidth: 'none', // Firefox
               msOverflowStyle: 'none'  // IE 10+
