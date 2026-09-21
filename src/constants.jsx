@@ -265,7 +265,7 @@ export const HERO_IMAGES = [
     alt: "University Campus"
   },
   {
-    src: "./img3.jpeg",
+    src: "/img3.jpeg",
     alt: "Competition Award"
   }
 ];
