@@ -293,7 +293,7 @@ export const SOCIAL_LINKS = [
   { 
     platform: "CV",
     icon: <FileUser size={20} />, 
-    href: "https://drive.google.com/file/d/1jmaJVwRLdapxU0ZKcW2nGDHZoCdoB-Ne/view?usp=sharing", 
+    href: "https://drive.google.com/file/d/1ecihWm0jNHY2WszcEk5yiw66u_MWFDTP/view?usp=sharing", 
     name: "View CV" 
   },
 ];
