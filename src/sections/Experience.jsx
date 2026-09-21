@@ -1,30 +1,13 @@
-import { ChevronLeft, ChevronRight, Trophy } from "lucide-react";
-import React, { useState } from "react";
+import { Trophy } from "lucide-react";
 import { EXPERIENCE, VOLUNTEER, ACHIEVEMENTS } from "../constants";
 
 
-const Experience = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % ACHIEVEMENTS.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + ACHIEVEMENTS.length) % ACHIEVEMENTS.length);
-  };
-
-  const visibleAwards = [
-    ACHIEVEMENTS[currentIndex % ACHIEVEMENTS.length],
-    ACHIEVEMENTS[(currentIndex + 1) % ACHIEVEMENTS.length],
-    ACHIEVEMENTS[(currentIndex + 2) % ACHIEVEMENTS.length],
-  ];
-  
+const Experience = () => { 
   return (
     <section id="experience" className="py-20 px-6 max-w-5xl mx-auto">
       {EXPERIENCE.length > 0 &&
         <div className="mb-16">
-          <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-16 text-primary dark:text-white tracking-tight">
+          <h2 className="font-semibold text-2xl md:text-3xl font-light text-center mb-16 text-primary dark:text-white tracking-tight">
             Professional Experiences
           </h2>
 
@@ -57,7 +40,7 @@ const Experience = () => {
 
       {VOLUNTEER.length > 0 &&
         <div className="mb-16">
-          <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-16 text-primary dark:text-white tracking-tight">
+          <h2 className="font-semibold text-2xl md:text-3xl font-light text-center mb-16 text-primary dark:text-white tracking-tight">
             Volunteer Experiences
           </h2>
           <div className="space-y-12">
@@ -98,7 +81,7 @@ const Experience = () => {
 
       {ACHIEVEMENTS.length > 0 && (
         <div>
-          <h2 className="font-semibold text-2xl md:text-3lg font-light text-center mb-12 text-primary dark:text-white tracking-tight">
+          <h2 className="font-semibold text-2xl md:text-3xl font-light text-center mb-12 text-primary dark:text-white tracking-tight">
             Awards
           </h2>
 
