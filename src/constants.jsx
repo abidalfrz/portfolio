@@ -84,13 +84,13 @@ export const SKILLS_CATEGORIES = [
 ];
 
 export const EXPERIENCE = [
-  // {
-  //   role: "",
-  //   company: "",
-  //   year: "",
-  //   place: "",
-  //   description: ""
-  // }
+  {
+    role: "Forward Deployed Engineer Intern",
+    company: "PT. Inbridge Solusi Teknologi",
+    year: "Aug 2026 — Nov 2026",
+    place: "Surabaya, Indonesia",
+    description: "Developed two web applications for a government project, implementing features based on project requirements. Translated user workflows and stakeholder requirements into technical tasks for the engineering team. Tested application features, reproduced reported issues, and documented findings and handover instructions."
+  }
 ];
 
 export const VOLUNTEER = [
@@ -144,6 +144,38 @@ export const PROJECTS = [
     techStack: ["Python", "PyTorch", "FastAPI", "Gradio", "Ngrok"],
     link: "",
     github: "https://github.com/abidalfrz/Viz2Speech"
+  },
+  {
+    title: "summAIrize: AI Video Summarization Workspace",
+    tags: ["Generative AI", "NLP", "Full-Stack"],
+    description: "A full-stack AI workspace that turns YouTube transcripts into structured summaries, reflection questions, actionable next steps, and related video recommendations.",
+    techStack: ["Python", "Next.js", "FastAPI", "LangGraph", "Groq", "Docker"],
+    link: "",
+    github: "https://github.com/abidalfrz/summairize"
+  },
+  {
+    title: "Structure-Aware RAG Pipeline",
+    tags: ["RAG", "Hybrid Retrieval", "Generative AI"],
+    description: "A local document question-answering pipeline combining structure-aware PDF chunking, dense and BM25 retrieval, grounded generation, and systematic evaluation.",
+    techStack: ["Python", "LangChain", "Ollama", "Chroma", "BM25"],
+    link: "",
+    github: "https://github.com/abidalfrz/structure-aware-rag"
+  },
+  {
+    title: "E-commerce Data Engineering Pipeline",
+    tags: ["Data Engineering", "ELT", "Business Analytics"],
+    description: "An ELT pipeline and interactive dashboard analyzing high-value customers, payment preferences, and potential revenue leakage for a fictional e-commerce company.",
+    techStack: ["Python", "Apache Airflow", "ClickHouse", "dbt", "Metabase", "Docker"],
+    link: "",
+    github: "https://github.com/abidalfrz/dustinia-delixia-ecommerce-pipeline-fp-mci"
+  },
+  {
+    title: "Job Recruitment Scam Detection",
+    tags: ["Classification", "NLP", "Ensemble Learning"],
+    description: "An NLP system that classifies job postings as legitimate or fraudulent using multilingual text embeddings and ensemble learning, served through a containerized FastAPI API.",
+    techStack: ["Python", "FastAPI", "Scikit-learn", "SentenceTransformers", "XGBoost", "LightGBM", "Docker"],
+    link: "",
+    github: "https://github.com/abidalfrz/scam-recruitment-detection-system"
   },
   {
     title: "Air Quality Prediction System",
@@ -221,6 +253,13 @@ export const PROJECTS = [
 
 export const ACHIEVEMENTS = [
   {
+    title: "Hology 9.0",
+    rank: "5th Place",
+    type: "Data Mining Competition",
+    date: "2026",
+    scale: "National"
+  },
+  {
     title: "Data Slayer 3.0",
     rank: "Finalist (Top 10)",
     type: "Machine Learning Competition",
@@ -239,6 +278,13 @@ export const ACHIEVEMENTS = [
     rank: "🥉 3rd Place",
     type: "Data Science Competition",
     date: "Sep 2025",
+    scale: "National"
+  },
+  {
+    title: "Neurontara",
+    rank: "Finalist (Top 10 out of 57 teams)",
+    type: "Machine Learning Classification Competition",
+    date: "2025",
     scale: "National"
   },
   {
